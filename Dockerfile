@@ -25,7 +25,7 @@ COPY --from=builder /opt/keycloak/ /opt/keycloak/
 # change these values to point to a running postgres instance
 
 ENV KC_DB=postgres
-ENV KC_DB_URL=jdbc:postgresql://keycloak.c5u2ay66e1qg.eu-north-1.rds.amazonaws.com:5432/postgres
+ENV KC_DB_URL=${JDBC_URL}
 ENV KC_DB_USERNAME=postgres
 ENV KC_DB_PASSWORD=postres
 ENV KC_HOSTNAME=localhost
